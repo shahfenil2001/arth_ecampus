@@ -43,10 +43,8 @@ INSTALLED_APPS = [
     'batch',
     'generic',
     'crispy_forms',
-    'userapp',
-
+    'userapp',  
 ]
-
 AUTH_USER_MODEL = 'userapp.User'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

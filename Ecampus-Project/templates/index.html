@@ -13,6 +13,15 @@
 
     <title>Education Meeting HTML5 Template</title>
 
+    {% comment %} <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css"> {% endcomment %}
     
 <!--
 
@@ -74,7 +83,8 @@ https://templatemo.com/tm-569-edu-meeting
                           </li>
                           <li class="scroll-to-section"><a href="#courses">Courses</a></li> 
                           <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
-                          <li><a href= "{% url 'ecampus_urls:registration' %}">Registration</a></li> 
+                          <li><a href= "{% url 'ecampus_urls:registration' %}">Registration</a></li>
+                          <li><a href= "{% url 'ecampus_urls:user-login' %}">Login</a></li> 
                       </ul>        
                       <a class='menu-trigger'>
                           <span>Menu</span>
