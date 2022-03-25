@@ -1,5 +1,6 @@
 {% load static %}
 {% load crispy_forms_tags %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en" >
 	<head>
@@ -20,23 +21,26 @@
 		<div class="wrapper" style="background-image: url('{% static "user/image/Ecampus (6).jpg"%}');"> 
 			
 			<div class="inner">
-				<form action="#" method="POST" data-toggle="validator" role="form">
+				<form method="POST" data-toggle="validator" role="form">
 					{% csrf_token %}
-					{{form.as_p}}
+					{% comment %} {{form.as_p}} {% endcomment %}
 					<h3>Registration Form</h3>
 					<div class="form-group">
 						<div class="form-wrapper">
 							<label for="">Username:</label>
 							<div class="form-holder">
-								<i class="zmdi zmdi-account-o"></i>
-								<input type="text" class="form-control">
+								{% comment %} <i class="zmdi zmdi-account-o"></i> {% endcomment %}
+								<i class="zmdi zmdi-lock-outline"></i>
+								{% render_field form.username type="text" class="form-control" placeholder="username" %}
+								{% comment %} <input type="text" class="form-control"> {% endcomment %}
 							</div>
 						</div>
 						<div class="form-wrapper">
 							<label for="">Email:</label>
 							<div class="form-holder">
 								<i style="font-style: normal; font-size: 15px;">@</i>
-								<input type="text" class="form-control">
+								{% render_field form.email type="text" class="form-control" placeholder="abc@gmail.com" %}
+								{% comment %} <input type="text" class="form-control"> {% endcomment %}
 							</div>
 						</div>
 					</div>
@@ -45,14 +49,16 @@
 							<label for="">Password:</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
-								<input type="password" class="form-control" placeholder="********">
+								{% render_field form.password type="text" class="form-control" placeholder="*******" %}
+								{% comment %} <input type="password" class="form-control" placeholder="********"> {% endcomment %}
 							</div>
 						</div>
 						<div class="form-wrapper">
-							<label for="">Repeat Password:</label>
+							<label for="">Phone Number</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
-								<input type="password" class="form-control" placeholder="********">
+								{% render_field form.phone_number type="text" class="form-control" placeholder="9876543210" %}
+								{% comment %} <input type="password" class="form-control" placeholder="********"> {% endcomment %}
 							</div>
 						</div>
 					</div>

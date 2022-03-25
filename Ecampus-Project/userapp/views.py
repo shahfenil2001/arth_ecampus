@@ -19,7 +19,7 @@ class BaseRegisterView(SuccessMessageMixin, FormView):
     model = User
     form_class = UserForm
     template_name = 'userportal/registration.html'
-    # success_url = '/user/user-login'
+    success_url = '/user/user-login'
 
   
     def form_valid(self, form):

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'generic',
     'crispy_forms',
     'userapp',  
+    'widget_tweaks'
 ]
 AUTH_USER_MODEL = 'userapp.User'
 
@@ -144,3 +145,10 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/user/index/'
+
+# EMAIL_BACKEND = 'djanago.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = ' '
+# EMAIL_HOST_PASSWORD = ' '
